@@ -1,0 +1,6 @@
+framework module FooEBankingCheques {
+  umbrella header "FooEBankingCheques.h"
+  export *
+
+  module * { export * }
+}

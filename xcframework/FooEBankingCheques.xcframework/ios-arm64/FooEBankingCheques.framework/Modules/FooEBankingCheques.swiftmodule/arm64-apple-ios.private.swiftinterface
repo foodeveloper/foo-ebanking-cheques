@@ -1,0 +1,489 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name FooEBankingCheques
+import Combine
+import DeveloperToolsSupport
+import FooAddress
+import FooConsents
+import FooDFCore
+import FooEBankingAccounts
+@_exported import FooEBankingCheques
+import FooEBankingCommon
+import FooFramework
+import FooRequesterWrapper
+import FooUI
+import FooYeepalCoreUI
+import Foundation
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum EBListStatusType : Swift.String {
+  case chequebookStatus
+  case leafStatus
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum EBMyChequeBookStatus : Swift.String, Swift.CaseIterable {
+  case approved
+  case pending
+  case inProgress
+  case delivered
+  case dispatched
+  case printed
+  case declined
+  case deleted
+  case rejected
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [FooEBankingCheques.EBMyChequeBookStatus]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [FooEBankingCheques.EBMyChequeBookStatus] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc public class EBChequeBook : FooRequesterWrapper.FCBaseItem {
+  override public func returnedItem(item: [Swift.String : Any])
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init!(jsonDictionary dictionary: [Swift.AnyHashable : Any]!)
+  @objc deinit
+}
+@objc public class EBChequeBookFilterStatus : FooRequesterWrapper.FCBaseItem {
+  override public func returnedItem(item: [Swift.String : Any])
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init!(jsonDictionary dictionary: [Swift.AnyHashable : Any]!)
+  @objc deinit
+}
+@objc public class EBChequeBookStatus : FooRequesterWrapper.FCBaseItem {
+  override public func returnedItem(item: [Swift.String : Any])
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init!(jsonDictionary dictionary: [Swift.AnyHashable : Any]!)
+  @objc deinit
+}
+@objc public class EBChequeDeposit : FooRequesterWrapper.FCBaseItem {
+  override public func returnedItem(item: [Swift.String : Any])
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init!(jsonDictionary dictionary: [Swift.AnyHashable : Any]!)
+  @objc deinit
+}
+@objc public class EBChequeDepositConsent : FooRequesterWrapper.FCBaseItem {
+  override public func returnedItem(item: [Swift.String : Any])
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init!(jsonDictionary dictionary: [Swift.AnyHashable : Any]!)
+  @objc deinit
+}
+public struct EBChequeBookFiltersRequestItem : Swift.Equatable {
+  public static func == (lhs: FooEBankingCheques.EBChequeBookFiltersRequestItem, rhs: FooEBankingCheques.EBChequeBookFiltersRequestItem) -> Swift.Bool
+}
+public struct EBChequesFiltersRequestItem : Swift.Equatable {
+  public static func == (lhs: FooEBankingCheques.EBChequesFiltersRequestItem, rhs: FooEBankingCheques.EBChequesFiltersRequestItem) -> Swift.Bool
+}
+@objc public class EBChequeDepositConsentsResponse : FooRequesterWrapper.FCBaseResponse {
+  override public func returnedResponse(response: [Swift.String : Any])
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init!(jsonDictionary dictionary: [Swift.AnyHashable : Any]!)
+  @objc deinit
+}
+@objc public class EBChequeDepositEligibilityResponse : FooRequesterWrapper.FCBaseResponse {
+  override public func returnedResponse(response: [Swift.String : Any])
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init!(jsonDictionary dictionary: [Swift.AnyHashable : Any]!)
+  @objc deinit
+}
+@objc public class EBChequeDepositListResponse : FooRequesterWrapper.FCBaseResponse {
+  override public func returnedResponse(response: [Swift.String : Any])
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init!(jsonDictionary dictionary: [Swift.AnyHashable : Any]!)
+  @objc deinit
+}
+@objc public class EBChequeBookCreationResponse : FooRequesterWrapper.FCBaseResponse {
+  override public func returnedResponse(response: [Swift.String : Any])
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init!(jsonDictionary dictionary: [Swift.AnyHashable : Any]!)
+  @objc deinit
+}
+@objc public class EBChequeBookListStatusResponse : FooRequesterWrapper.FCBaseResponse {
+  override public func returnedResponse(response: [Swift.String : Any])
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init!(jsonDictionary dictionary: [Swift.AnyHashable : Any]!)
+  @objc deinit
+}
+@objc public class EBChequeBooksResponse : FooRequesterWrapper.FCBaseResponse {
+  override public func returnedResponse(response: [Swift.String : Any])
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init!(jsonDictionary dictionary: [Swift.AnyHashable : Any]!)
+  @objc deinit
+}
+@objc public class EBChequeBookStatusesResponse : FooRequesterWrapper.FCBaseResponse {
+  override public func returnedResponse(response: [Swift.String : Any])
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init!(jsonDictionary dictionary: [Swift.AnyHashable : Any]!)
+  @objc deinit
+}
+@objc public class EBChequeImageResponse : FooRequesterWrapper.FCBaseResponse {
+  override public func returnedResponse(response: [Swift.String : Any])
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init!(jsonDictionary dictionary: [Swift.AnyHashable : Any]!)
+  @objc deinit
+}
+public protocol EBChequesRepository : FooEBankingCommon.EBRequestChequeBookLeavesRepository {
+  func getChequeBooks(mainUrl: Swift.String, chequeBookFiltersRequestItem: FooEBankingCheques.EBChequeBookFiltersRequestItem?, accountNumber: Swift.String, page: Swift.Int, fooRequesterDelegate: (any UIKit.UIViewController & FooFramework.FORequesterDelegate)?, cacheWritePolicy: FooFramework.FOCacheWritePolicy, cacheReadPolicy: FooFramework.FOCacheReadPolicy, showLoader: FooRequesterWrapper.FCRequestHandlerVoid?, completionHandler: @escaping FooRequesterWrapper.FCRequestHandlerCompletion<FooEBankingCheques.EBChequeBooksResponse>)
+  func getChequeBookFilterStatus(mainUrl: Swift.String, type: Swift.String?, fooRequesterDelegate: (any UIKit.UIViewController & FooFramework.FORequesterDelegate)?, cacheWritePolicy: FooFramework.FOCacheWritePolicy, cacheReadPolicy: FooFramework.FOCacheReadPolicy, showLoader: FooRequesterWrapper.FCRequestHandlerVoid?, completionHandler: @escaping FooRequesterWrapper.FCRequestHandlerCompletion<FooEBankingCheques.EBChequeBookListStatusResponse>)
+  func getChequeBookStatus(mainUrl: Swift.String, accountNumber: Swift.String?, chequeBookNb: Swift.String?, chequesFiltersRequestItem: FooEBankingCheques.EBChequesFiltersRequestItem?, page: Swift.Int, fooRequesterDelegate: (any UIKit.UIViewController & FooFramework.FORequesterDelegate)?, cacheWritePolicy: FooFramework.FOCacheWritePolicy, cacheReadPolicy: FooFramework.FOCacheReadPolicy, showLoader: FooRequesterWrapper.FCRequestHandlerVoid?, completionHandler: @escaping FooRequesterWrapper.FCRequestHandlerCompletion<FooEBankingCheques.EBChequeBookStatusesResponse>)
+  func getChequeImages(mainUrl: Swift.String, accountReference: Swift.String?, chequeId: Swift.String?, chequeLeafId: Swift.String?, fooRequesterDelegate: (any UIKit.UIViewController & FooFramework.FORequesterDelegate)?, cacheWritePolicy: FooFramework.FOCacheWritePolicy, cacheReadPolicy: FooFramework.FOCacheReadPolicy, showLoader: FooRequesterWrapper.FCRequestHandlerVoid?, completionHandler: @escaping FooRequesterWrapper.FCRequestHandlerCompletion<FooEBankingCheques.EBChequeImageResponse>)
+  func requestChequebook(mainUrl: Swift.String, accountNumber: Swift.String?, leavesNumber: Swift.String?, mailingAddress: Swift.String?, fooRequesterDelegate: (any UIKit.UIViewController & FooFramework.FORequesterDelegate)?, completionHandler: @escaping FooRequesterWrapper.FCRequestHandlerCompletion<FooEBankingCheques.EBChequeBookCreationResponse>)
+  func chequeDepositEligibility(mainUrl: Swift.String, fooRequesterDelegate: (any UIKit.UIViewController & FooFramework.FORequesterDelegate)?, completionHandler: @escaping FooRequesterWrapper.FCRequestHandlerCompletion<FooEBankingCheques.EBChequeDepositEligibilityResponse>)
+  func getChequeDepositImages(mainUrl: Swift.String, depositAccountNumber: Swift.String?, payerAccountNumber: Swift.String?, chequeSerial: Swift.String?, routingCode: Swift.String?, fooRequesterDelegate: (any UIKit.UIViewController & FooFramework.FORequesterDelegate)?, cacheWritePolicy: FooFramework.FOCacheWritePolicy, cacheReadPolicy: FooFramework.FOCacheReadPolicy, showLoader: FooRequesterWrapper.FCRequestHandlerVoid?, completionHandler: @escaping FooRequesterWrapper.FCRequestHandlerCompletion<FooEBankingCheques.EBChequeImageResponse>)
+}
+public class EBChequesBaseUseCase {
+  required public init(repository: (any FooEBankingCheques.EBChequesRepository)? = nil, mainUrl: Swift.String = FRWInstance.shared.mainURL)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class EBGetChequeBookFilterStatusUseCase : FooEBankingCheques.EBChequesBaseUseCase {
+  final public func execute(type: FooEBankingCheques.EBListStatusType, fooRequesterDelegate: (any UIKit.UIViewController & FooFramework.FORequesterDelegate)? = nil, cacheWritePolicy: FooFramework.FOCacheWritePolicy = FODoNotWriteToCache, cacheReadPolicy: FooFramework.FOCacheReadPolicy = FODoNotReadFromCache, showLoader: FooRequesterWrapper.FCRequestHandlerVoid?, completionHandler: @escaping FooRequesterWrapper.FCRequestHandlerCompletion<FooEBankingCheques.EBChequeBookListStatusResponse>)
+  required public init(repository: (any FooEBankingCheques.EBChequesRepository)? = nil, mainUrl: Swift.String = super)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class EBGetChequeBookStatusUseCase : FooEBankingCheques.EBChequesBaseUseCase {
+  final public func execute(accountNumber: Swift.String?, chequeBookNb: Swift.String?, chequesFiltersRequestItem: FooEBankingCheques.EBChequesFiltersRequestItem?, page: Swift.Int, fooRequesterDelegate: (any UIKit.UIViewController & FooFramework.FORequesterDelegate)? = nil, cacheWritePolicy: FooFramework.FOCacheWritePolicy = FODoNotWriteToCache, cacheReadPolicy: FooFramework.FOCacheReadPolicy = FODoNotReadFromCache, showLoader: FooRequesterWrapper.FCRequestHandlerVoid?, completionHandler: @escaping FooRequesterWrapper.FCRequestHandlerCompletion<FooEBankingCheques.EBChequeBookStatusesResponse>)
+  required public init(repository: (any FooEBankingCheques.EBChequesRepository)? = nil, mainUrl: Swift.String = super)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class EBGetChequeBooksUseCase : FooEBankingCheques.EBChequesBaseUseCase {
+  final public func execute(chequeBookFiltersRequestItem: FooEBankingCheques.EBChequeBookFiltersRequestItem?, accountNumber: Swift.String, page: Swift.Int, fooRequesterDelegate: (any UIKit.UIViewController & FooFramework.FORequesterDelegate)? = nil, cacheWritePolicy: FooFramework.FOCacheWritePolicy = FODoNotWriteToCache, cacheReadPolicy: FooFramework.FOCacheReadPolicy = FODoNotReadFromCache, showLoader: FooRequesterWrapper.FCRequestHandlerVoid?, completionHandler: @escaping FooRequesterWrapper.FCRequestHandlerCompletion<FooEBankingCheques.EBChequeBooksResponse>)
+  required public init(repository: (any FooEBankingCheques.EBChequesRepository)? = nil, mainUrl: Swift.String = super)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class EBGetChequeImagesUseCase : FooEBankingCheques.EBChequesBaseUseCase {
+  final public func execute(accountReference: Swift.String?, chequeId: Swift.String?, chequeLeafId: Swift.String?, fooRequesterDelegate: (any UIKit.UIViewController & FooFramework.FORequesterDelegate)? = nil, cacheWritePolicy: FooFramework.FOCacheWritePolicy = FODoNotWriteToCache, cacheReadPolicy: FooFramework.FOCacheReadPolicy = FODoNotReadFromCache, showLoader: FooRequesterWrapper.FCRequestHandlerVoid?, completionHandler: @escaping FooRequesterWrapper.FCRequestHandlerCompletion<FooEBankingCheques.EBChequeImageResponse>)
+  required public init(repository: (any FooEBankingCheques.EBChequesRepository)? = nil, mainUrl: Swift.String = super)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class EBRequestChequebookUseCase : FooEBankingCheques.EBChequesBaseUseCase {
+  final public func execute(accountNumber: Swift.String?, leavesNumber: Swift.String?, mailingAddress: Swift.String?, fooRequesterDelegate: (any UIKit.UIViewController & FooFramework.FORequesterDelegate)? = nil, completionHandler: @escaping FooRequesterWrapper.FCRequestHandlerCompletion<FooEBankingCheques.EBChequeBookCreationResponse>)
+  required public init(repository: (any FooEBankingCheques.EBChequesRepository)? = nil, mainUrl: Swift.String = super)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class EBChequeDepositEligibilityUseCase : FooEBankingCheques.EBChequesBaseUseCase {
+  final public func execute(fooRequesterDelegate: (any UIKit.UIViewController & FooFramework.FORequesterDelegate)? = nil, completionHandler: @escaping FooRequesterWrapper.FCRequestHandlerCompletion<FooEBankingCheques.EBChequeDepositEligibilityResponse>)
+  required public init(repository: (any FooEBankingCheques.EBChequesRepository)? = nil, mainUrl: Swift.String = super)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class EBGetChequeDepositImagesUseCase : FooEBankingCheques.EBChequesBaseUseCase {
+  final public func execute(depositAccountNumber: Swift.String?, payerAccountNumber: Swift.String?, chequeSerial: Swift.String?, routingCode: Swift.String?, fooRequesterDelegate: (any UIKit.UIViewController & FooFramework.FORequesterDelegate)? = nil, cacheWritePolicy: FooFramework.FOCacheWritePolicy = FODoNotWriteToCache, cacheReadPolicy: FooFramework.FOCacheReadPolicy = FODoNotReadFromCache, showLoader: FooRequesterWrapper.FCRequestHandlerVoid?, completionHandler: @escaping FooRequesterWrapper.FCRequestHandlerCompletion<FooEBankingCheques.EBChequeImageResponse>)
+  required public init(repository: (any FooEBankingCheques.EBChequesRepository)? = nil, mainUrl: Swift.String = super)
+  @objc deinit
+}
+extension Swift.String {
+  public var localized: Swift.String {
+    get
+  }
+}
+public enum EBChequesError : Swift.Error {
+  case appHandlerChequeBooksRequestStatusResultCoordinatorInterface
+  case chequeManagementListNotFound
+  case otherMessage(message: Swift.String)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class EBChequeDepositAccountsViewController : FooYeepalCoreUI.YeepalBaseSwiftUIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func setupInterface()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class EBChequeDepositAccountsViewModel : FooYeepalCoreUI.YeepalBaseViewModel, Foundation.ObservableObject {
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class EBChequeDepositConsentsViewController : FooYeepalCoreUI.YeepalBaseSwiftUIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func setupInterface()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class EBChequeDepositConsentsViewModel : FooYeepalCoreUI.YeepalBaseViewModel, Foundation.ObservableObject {
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+extension FooEBankingCheques.EBChequeDepositConsentsViewModel {
+  final public var canProceed: Combine.AnyPublisher<Swift.Bool, Swift.Never> {
+    get
+  }
+}
+
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class EBChequeDepositInfoViewController : FooYeepalCoreUI.YeepalBaseSwiftUIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func setupInterface()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class EBChequeDepositInfoViewModel : FooYeepalCoreUI.YeepalBaseViewModel, Foundation.ObservableObject {
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class EBChequebookAccountsViewController : FooYeepalCoreUI.YeepalBaseSwiftUIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func setupInterface()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class EBChequebookAccountsViewModel : FooYeepalCoreUI.YeepalBaseViewModel, Foundation.ObservableObject {
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class EBChequeBookSummaryViewController : FooYeepalCoreUI.YeepalBaseSwiftUIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func setupInterface()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class EBChequeBookSummaryViewModel : FooYeepalCoreUI.YeepalBaseViewModel, Foundation.ObservableObject {
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class EBChequeBookTermsViewController : FooYeepalCoreUI.YeepalBaseViewController {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var webView: FooFramework.FOWebView!
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func setupInterface()
+  @_Concurrency.MainActor @preconcurrency open func setupWebView(uiDelegate: any WebKit.WKUIDelegate, navigationDelegate: any WebKit.WKNavigationDelegate)
+  @_Concurrency.MainActor @preconcurrency open func setupWebViewConfiguration(webConfig: WebKit.WKWebViewConfiguration)
+  @_Concurrency.MainActor @preconcurrency open func setupWebViewAppearance()
+  @_Concurrency.MainActor @preconcurrency open func setupWebViewDelegates(uiDelegate: any WebKit.WKUIDelegate, navigationDelegate: any WebKit.WKNavigationDelegate)
+  @_Concurrency.MainActor @preconcurrency open func load(url: Foundation.URL?)
+  @_Concurrency.MainActor @preconcurrency open func load(htmlString: Swift.String?)
+  @objc deinit
+}
+extension FooEBankingCheques.EBChequeBookTermsViewController : WebKit.WKNavigationDelegate, WebKit.WKUIDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic open func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic open func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic open func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic open func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic open func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+}
+public class EBChequeBookTermsViewModel {
+  public init(account: FooEBankingCommon.EBAccount, numberOfLeaves: Swift.String, mailingAddress: Swift.String, cacheWritePolicy: FooFramework.FOCacheWritePolicy, cacheReadPolicy: FooFramework.FOCacheReadPolicy)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class EBChequeBooksFilterViewController : FooYeepalCoreUI.YeepalBaseSwiftUIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func setupInterface()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class EBChequeBooksViewController : FooYeepalCoreUI.YeepalBaseSwiftUIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func setupInterface()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func headerRightAction()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class EBChequeBooksFilterViewModel : FooYeepalCoreUI.YeepalBaseViewModel, Foundation.ObservableObject {
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+extension FooEBankingCheques.EBChequeBooksFilterViewModel {
+  final public var isValidFilter: Combine.AnyPublisher<Swift.Bool, Swift.Never> {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class EBChequeBooksViewModel : FooYeepalCoreUI.YeepalBaseViewModel, Foundation.ObservableObject {
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+
+
+public typealias EBChequeBooksRequestStatusContactUsCoordinatorInterface = FooEBankingCheques.EBChequeBooksRequestStatusResultCoordinatorInterface & FooEBankingCommon.EBBaseContactUsCoordinatorInterface
+public typealias EBAppHandlerChequeBooksRequestStatusContactUsCoordinatorInterface = FooEBankingCheques.EBAppHandlerChequeBooksRequestStatusResultCoordinatorInterface & FooEBankingCommon.EBAppHandlerBaseContactUsCoordinatorInterface
+public protocol EBChequeBooksRequestStatusResultCoordinatorInterface : FooEBankingCommon.EBBaseAppHandlerCoordinatorInterface, FooEBankingCommon.EBBasePresentedDismissCoordinator {
+  func chequeBooksRequestDone(success: Swift.Bool) throws
+}
+public protocol EBAppHandlerChequeBooksRequestStatusResultCoordinatorInterface : AnyObject {
+  func appHandlerChequeBooksRequestDone(success: Swift.Bool, navigationController: UIKit.UINavigationController?)
+}
+public class EBChequeBooksRequestStatusResultCoordinator<AppHandler> : FooEBankingCheques.EBChequeBooksRequestStatusResultCoordinatorInterface where AppHandler : FooEBankingCheques.EBAppHandlerChequeBooksRequestStatusResultCoordinatorInterface, AppHandler : FooEBankingCommon.EBAppHandlerBaseContactUsCoordinatorInterface {
+  public var navigationController: UIKit.UINavigationController?
+  public var appHandler: AppHandler?
+  public init(navigationController: UIKit.UINavigationController? = nil, appHandler: AppHandler? = nil)
+  public func start(_ result: (username: Swift.String?, isSuccess: Swift.Bool, resultData: (any FooEBankingCommon.EBResultDataUIInterface)?)?)
+  public typealias AppHandlerType = AppHandler
+  public typealias Params = (username: Swift.String?, isSuccess: Swift.Bool, resultData: (any FooEBankingCommon.EBResultDataUIInterface)?)
+  @objc deinit
+}
+extension FooEBankingCheques.EBChequeBooksRequestStatusResultCoordinator {
+  public func chequeBooksRequestDone(success: Swift.Bool) throws
+}
+extension FooEBankingCheques.EBChequeBooksRequestStatusResultCoordinator : FooEBankingCommon.EBBaseContactUsCoordinatorInterface {
+  public func goToContactUs() throws
+}
+public typealias EBChequeBooksRequestStatusContactUsViewModelInterface = FooEBankingCheques.EBChequeBooksRequestStatusViewModelInterface & FooEBankingCommon.EBFailureViewModelInterface
+public protocol EBChequeBooksRequestStatusViewModelInterface : FooEBankingCommon.EBResultViewModelInterface {
+  var isSuccess: Swift.Bool { get }
+  associatedtype Coordinator : FooEBankingCheques.EBChequeBooksRequestStatusResultCoordinatorInterface
+  var coordinator: Self.Coordinator? { get }
+}
+public class EBChequeBooksRequestStatusContactUsViewModel<Coordinator> : FooEBankingCheques.EBChequeBooksRequestStatusResultViewModel<Coordinator> where Coordinator : FooEBankingCheques.EBChequeBooksRequestStatusResultCoordinatorInterface, Coordinator : FooEBankingCommon.EBBaseContactUsCoordinatorInterface {
+  final public let uiInterface: any FooEBankingCommon.EBFailureViewUIInterface
+  public init(isSuccess: Swift.Bool, uiInterface: any FooEBankingCommon.EBFailureViewUIInterface, resultData: any FooEBankingCommon.EBResultDataUIInterface, resultUIInterface: any FooEBankingCommon.EBBaseResultViewUIInterface, coordinator: Coordinator? = nil)
+  @objc deinit
+}
+extension FooEBankingCheques.EBChequeBooksRequestStatusContactUsViewModel {
+  convenience public init(isSuccess: Swift.Bool, uiInterface: (any FooEBankingCommon.EBFailureViewUIInterface)? = nil, resultData: any FooEBankingCommon.EBResultDataUIInterface, coordinator: Coordinator? = nil)
+}
+extension FooEBankingCheques.EBChequeBooksRequestStatusContactUsViewModel : FooEBankingCommon.EBFailureViewModelInterface {
+  public func contactUs()
+}
+public class EBChequeBooksRequestStatusResultViewModel<Coordinator> : FooEBankingCheques.EBChequeBooksRequestStatusViewModelInterface where Coordinator : FooEBankingCheques.EBChequeBooksRequestStatusResultCoordinatorInterface {
+  final public let resultData: any FooEBankingCommon.EBResultDataUIInterface
+  final public let resultUIInterface: any FooEBankingCommon.EBBaseResultViewUIInterface
+  final public let isSuccess: Swift.Bool
+  public var coordinator: Coordinator?
+  public init(isSuccess: Swift.Bool, resultData: any FooEBankingCommon.EBResultDataUIInterface, resultUIInterface: any FooEBankingCommon.EBBaseResultViewUIInterface, coordinator: Coordinator? = nil)
+  @objc deinit
+}
+extension FooEBankingCheques.EBChequeBooksRequestStatusResultViewModel {
+  convenience public init(isSuccess: Swift.Bool, resultData: any FooEBankingCommon.EBResultDataUIInterface, coordinator: Coordinator?)
+}
+extension FooEBankingCheques.EBChequeBooksRequestStatusResultViewModel {
+  public func done()
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class EBChequeListFilterViewController : FooYeepalCoreUI.YeepalBaseSwiftUIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func setupInterface()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class EBChequesListViewController : FooYeepalCoreUI.YeepalBaseSwiftUIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func setupInterface()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func headerRightAction()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class EBChequeListFilterViewModel<DropDownDatePickerInterface> : FooYeepalCoreUI.YeepalBaseViewModel, Foundation.ObservableObject where DropDownDatePickerInterface : FooEBankingCommon.EBDropDownDatePickerInterface {
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+extension FooEBankingCheques.EBChequeListFilterViewModel {
+  final public var isValidStatus: Combine.AnyPublisher<Swift.Bool, Swift.Never> {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class EBChequesListViewModel : FooYeepalCoreUI.YeepalBaseViewModel, Foundation.ObservableObject {
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+
+
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class EBRequestChequeBookViewController : FooYeepalCoreUI.YeepalBaseSwiftUIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func setupInterface()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class EBRequestChequeBookViewModel : FooYeepalCoreUI.YeepalBaseViewModel, Foundation.ObservableObject {
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+extension FooEBankingCheques.EBRequestChequeBookViewModel {
+  final public var isValidChoice: Combine.AnyPublisher<Swift.Bool, Swift.Never> {
+    get
+  }
+}
+
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class EBViewChequeViewController : FooYeepalCoreUI.YeepalBaseSwiftUIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func setupInterface()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class EBViewChequeViewModel : FooYeepalCoreUI.YeepalBaseViewModel, Foundation.ObservableObject {
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+
+public protocol EBChequesHandler {
+  func chequesWantToOpenChequebooks(account: FooEBankingCommon.EBAccount)
+  func chequesWantToShowChequebookFilter(filter: FooEBankingCheques.EBChequeBookFiltersRequestItem?, appylyFilter: @escaping (FooEBankingCheques.EBChequeBookFiltersRequestItem) -> Swift.Void)
+  func chequesWantToOpenChequesList(account: FooEBankingCommon.EBAccount, chequebook: FooEBankingCheques.EBChequeBook)
+  func chequesWantToShowChequesListFilter(filter: FooEBankingCheques.EBChequesFiltersRequestItem?, appylyFilter: @escaping (FooEBankingCheques.EBChequesFiltersRequestItem) -> Swift.Void)
+  func chequesWantToViewCheque(chequeNumber: Swift.String?, frontImage: Swift.String?, backImage: Swift.String?)
+  func chequesWantToRequestChequebook(account: FooEBankingCommon.EBAccount, leavesList: [Swift.String])
+  func chequesWantToShowChequebookTerms(account: FooEBankingCommon.EBAccount, numberOfLeaves: Swift.String, mailingAddress: Swift.String)
+  func chequesWantToShowRequestSummary(account: FooEBankingCommon.EBAccount, numberOfLeaves: Swift.String, mailingAddress: Swift.String)
+  func chequesWantToHandleRequestResult(success: Swift.Bool, message: Swift.String?)
+  func chequesNotAllowedToRequestChequebookAlert()
+  func chequesWantToOpenDepositCheque()
+  func chequesWantToOpenDepositedCheques(account: FooEBankingCommon.EBAccount)
+  func chequesWantToSelectDepositChequeAccount()
+}
+@objc public class EBChequesInstance : ObjectiveC.NSObject {
+  public static var `default`: FooEBankingCheques.EBChequesInstance
+  public var handler: (any FooEBankingCheques.EBChequesHandler)?
+  public init(handler: (any FooEBankingCheques.EBChequesHandler)?)
+  @objc deinit
+}
+extension FooEBankingCheques.EBChequeDepositConsent : Swift.Identifiable {
+  public var id: Swift.String {
+    get
+  }
+  public typealias ID = Swift.String
+}
+extension FooEBankingCheques.EBChequeBookFilterStatus : FooEBankingCommon.EBPickerItem {
+  public var idValue: Swift.String {
+    get
+  }
+  public var titleValue: Swift.String? {
+    get
+  }
+  public typealias ID = Swift.String
+}
+extension FooEBankingCheques.EBChequeBookStatus : Swift.Identifiable {
+  public var id: Swift.String {
+    get
+  }
+  public typealias ID = Swift.String
+}
+extension FooEBankingCheques.EBChequeBook : Swift.Identifiable {
+  public var id: Swift.String {
+    get
+  }
+  public var referenceNumberLabel: Swift.String {
+    get
+  }
+  public var isClickable: Swift.Bool {
+    get
+  }
+  public typealias ID = Swift.String
+}
+@_hasMissingDesignatedInitializers public class EBChequeBooksRouter {
+  public static func chequebooksVC(account: FooEBankingCommon.EBAccount, cacheWritePolicy: FooFramework.FOCacheWritePolicy = FODoNotWriteToCache, cacheReadPolicy: FooFramework.FOCacheReadPolicy = FODoNotReadFromCache) -> FooEBankingCheques.EBChequeBooksViewController
+  public static func chequebooksFilterVC(requestItem: FooEBankingCheques.EBChequeBookFiltersRequestItem?, cacheWritePolicy: FooFramework.FOCacheWritePolicy = FODoNotWriteToCache, cacheReadPolicy: FooFramework.FOCacheReadPolicy = FODoNotReadFromCache, applyFilter: @escaping (FooEBankingCheques.EBChequeBookFiltersRequestItem) -> Swift.Void) -> FooEBankingCheques.EBChequeBooksFilterViewController
+  public static func chequesListVC(account: FooEBankingCommon.EBAccount, chequebook: FooEBankingCheques.EBChequeBook, cacheWritePolicy: FooFramework.FOCacheWritePolicy = FODoNotWriteToCache, cacheReadPolicy: FooFramework.FOCacheReadPolicy = FODoNotReadFromCache) -> FooEBankingCheques.EBChequesListViewController
+  public static func chequeListFilterVC(requestItem: FooEBankingCheques.EBChequesFiltersRequestItem?, cacheWritePolicy: FooFramework.FOCacheWritePolicy = FODoNotWriteToCache, cacheReadPolicy: FooFramework.FOCacheReadPolicy = FODoNotReadFromCache, applyFilter: @escaping (FooEBankingCheques.EBChequesFiltersRequestItem) -> Swift.Void) -> FooEBankingCheques.EBChequeListFilterViewController
+  public static func viewChequeVC(chequeNumber: Swift.String?, frontImage: Swift.String?, backImage: Swift.String?) -> FooEBankingCheques.EBViewChequeViewController
+  public static func requestChequebookVC(account: FooEBankingCommon.EBAccount, leavesList: [Swift.String], cacheWritePolicy: FooFramework.FOCacheWritePolicy = FODoNotWriteToCache, cacheReadPolicy: FooFramework.FOCacheReadPolicy = FODoNotReadFromCache) -> FooEBankingCheques.EBRequestChequeBookViewController
+  public static func chequebookSummaryVC(account: FooEBankingCommon.EBAccount, numberOfLeaves: Swift.String, mailingAddress: Swift.String) -> FooEBankingCheques.EBChequeBookSummaryViewController
+  public static func chequebookTermsVC(account: FooEBankingCommon.EBAccount, numberOfLeaves: Swift.String, mailingAddress: Swift.String, cacheWritePolicy: FooFramework.FOCacheWritePolicy = FODoNotWriteToCache, cacheReadPolicy: FooFramework.FOCacheReadPolicy = FODoNotReadFromCache) -> FooEBankingCheques.EBChequeBookTermsViewController
+  public static func chequebookAccountsVC(cacheWritePolicy: FooFramework.FOCacheWritePolicy = FODoNotWriteToCache, cacheReadPolicy: FooFramework.FOCacheReadPolicy = FODoNotReadFromCache) -> FooEBankingCheques.EBChequebookAccountsViewController
+  public static func chequeDepositAccountsVC(cacheWritePolicy: FooFramework.FOCacheWritePolicy = FODoNotWriteToCache, cacheReadPolicy: FooFramework.FOCacheReadPolicy = FODoNotReadFromCache) -> FooEBankingCheques.EBChequeDepositAccountsViewController
+  public static func chequeDepositInfoVC(chequeDeposit: FooEBankingCheques.EBChequeDeposit, account: FooEBankingCommon.EBAccount) -> FooEBankingCheques.EBChequeDepositInfoViewController
+  public static func chequeDepositConsentsVC(cacheWritePolicy: FooFramework.FOCacheWritePolicy = FODoNotWriteToCache, cacheReadPolicy: FooFramework.FOCacheReadPolicy = FODoNotReadFromCache) -> FooEBankingCheques.EBChequeDepositConsentsViewController
+  @objc deinit
+}
+extension FooEBankingCheques.EBListStatusType : Swift.Equatable {}
+extension FooEBankingCheques.EBListStatusType : Swift.Hashable {}
+extension FooEBankingCheques.EBListStatusType : Swift.RawRepresentable {}
+extension FooEBankingCheques.EBMyChequeBookStatus : Swift.Equatable {}
+extension FooEBankingCheques.EBMyChequeBookStatus : Swift.Hashable {}
+extension FooEBankingCheques.EBMyChequeBookStatus : Swift.RawRepresentable {}
+extension FooEBankingCheques.EBChequeDepositAccountsViewController : Swift.Sendable {}
+extension FooEBankingCheques.EBChequeDepositConsentsViewController : Swift.Sendable {}
+extension FooEBankingCheques.EBChequeDepositInfoViewController : Swift.Sendable {}
+extension FooEBankingCheques.EBChequebookAccountsViewController : Swift.Sendable {}
+extension FooEBankingCheques.EBChequeBookSummaryViewController : Swift.Sendable {}
+extension FooEBankingCheques.EBChequeBookTermsViewController : Swift.Sendable {}
+extension FooEBankingCheques.EBChequeBooksFilterViewController : Swift.Sendable {}
+extension FooEBankingCheques.EBChequeBooksViewController : Swift.Sendable {}
+extension FooEBankingCheques.EBChequeListFilterViewController : Swift.Sendable {}
+extension FooEBankingCheques.EBChequesListViewController : Swift.Sendable {}
+extension FooEBankingCheques.EBRequestChequeBookViewController : Swift.Sendable {}
+extension FooEBankingCheques.EBViewChequeViewController : Swift.Sendable {}
